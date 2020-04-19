@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Dev Enterprises</h2>
+<h3>Product Catalog</h3>
+<table>
+  <tr *ngIf="products.length>0">
+    <th>id</th>
+    <th>Name</th>
+    <th>Brand</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.brand}}</td>
+    <td>{{product.price}}</td>
+  </tr>
+</table>
+<input type="text" [(ngModel)]="message">{{message}}
+</body>
+</html>
+
